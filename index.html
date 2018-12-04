@@ -1,0 +1,66 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+	<head>
+		<title>cuentaregresiva</title>
+		<script src="http://www.google.com/jsapi"></script>
+		<script>
+		  google.load("jquery", "1.3.2");
+		</script>
+		<script type="text/javascript" src="jquery.countdown.js"></script>
+		<script type="text/javascript">
+		$(function () {
+			$('#defaultCountdown').countdown({
+				until: +1000,
+				format: 'YDHMS',
+				layout: '<div id="timer">'+
+							'<div id="vals">'+
+								'<div id="y" class="numbs">{ynn}</div>'+
+								'<div id="d" class="numbs">{dnnn}</div>'+
+								'<div id="h" class="numbs">{hnn}</div>'+
+								'<div id="m" class="numbs">{mnn}</div>'+
+								'<div id="s" class="numbs">{snn}</div>'+
+							'</div>'+
+							'<div id="labels">'+
+								'<div id="yl" class="labs">years</div>'+
+								'<div id="dl" class="labs">days</div>'+
+								'<div id="hl" class="labs">hours</div>'+
+								'<div id="ml" class="labs">mins</div>'+
+								'<div id="sl" class="labs">secs</div>'+
+							'</div>'+
+							'<div id="timer_over"></div>'+
+						'</div>'
+                
+                 
+				});
+            
+           var y = document.getElementById("y"); 
+           var d = document.getElementById("d");
+           var h = document.getElementById("h");
+           var m = document.getElementById("m");
+           var s = document.getElementById("s");
+            
+            
+            
+            
+            if (y.innerHTML = "00" && d.innerHTML = "00" && h.innerHTML = "00" && m.innerHTML = "00" && s.innerHTML = "00"){
+                alert("El contador termino");
+            }
+                  
+                
+		});
+                
+
+		</script>
+		<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+
+	</head>
+	<body>
+
+	
+
+	<div id="defaultCountdown"></div>
+
+	</body>
+</html>
